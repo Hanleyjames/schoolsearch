@@ -9,6 +9,11 @@ import { BottomnavComponent } from './components/navbar/bottomnav/bottomnav.comp
 import { HomeComponent } from './components/home/home.component';
 import { AdvancesearchComponent } from './components/advancesearch/advancesearch.component';
 import { SearchresultsComponent } from './components/searchresults/searchresults.component';
+import { QuicksearchComponent } from './components/home/quicksearch/quicksearch.component';
+import { LandingtextComponent } from './components/home/landingtext/landingtext.component';
+import { MidtextComponent } from './components/home/midtext/midtext.component';
+import { AboutComponent } from './components/home/about/about.component';
+import { EndtextComponent } from './components/home/endtext/endtext.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { SearchresultsComponent } from './components/searchresults/searchresults
     BottomnavComponent,
     HomeComponent,
     AdvancesearchComponent,
-    SearchresultsComponent
+    SearchresultsComponent,
+    QuicksearchComponent,
+    LandingtextComponent,
+    MidtextComponent,
+    AboutComponent,
+    EndtextComponent
   ],
   imports: [
     BrowserModule,
