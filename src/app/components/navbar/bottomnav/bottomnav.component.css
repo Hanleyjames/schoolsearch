@@ -1,0 +1,10 @@
+#bottomnav{
+  background-color: darkred;
+}
+li.linktext{
+  text-decoration:none;
+  color: black;
+}
+li{
+  list-style: none;
+}
