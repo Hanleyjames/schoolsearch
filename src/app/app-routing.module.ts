@@ -6,8 +6,8 @@ import { AdvancesearchComponent } from './components/advancesearch/advancesearch
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: '/results', component: SearchresultsComponent },
-  { path: '/search', component: AdvancesearchComponent }
+  { path: 'results', component: SearchresultsComponent },
+  { path: 'search', component: AdvancesearchComponent }
 ];
 
 @NgModule({
