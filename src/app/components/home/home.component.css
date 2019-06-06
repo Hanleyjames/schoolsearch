@@ -1,6 +1,23 @@
-#topnav{
-
+#topsection{
+  background: url(/assets/home-top-section-background.jpg);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+.block{
+  margin-top: 40px
 }
 #bottomnav{
   background-color:darkred;
 }
+
+#landingtext{
+  padding-right: 15%;
+  padding-left: 30px;
+  margin-top: 65px;
+  margin-bottom: 50px;
+}
+#homecomponent{
+  margin-top: 0px;
+}
+
