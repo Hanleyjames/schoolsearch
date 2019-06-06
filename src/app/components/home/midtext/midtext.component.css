@@ -1,0 +1,14 @@
+h2 {
+  color: darkred;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+#midtext{
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: white;
+}
+p{
+  text-align:center;
+}
