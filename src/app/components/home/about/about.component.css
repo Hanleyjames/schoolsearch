@@ -1,0 +1,16 @@
+#about{
+  height: 300px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+img{
+  height:inherit;
+  width: inherit;
+}
+#abouttext{
+  background:repeating-linear-gradient(45deg, forestgreen, green 25%);
+  color: white;
+  padding-top: 10px;
+}
+
