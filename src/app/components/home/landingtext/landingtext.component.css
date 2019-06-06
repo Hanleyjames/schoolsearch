@@ -1,0 +1,13 @@
+#landingtext {
+  background-color: rgba(0,0,0,0.9);
+  color:white;
+  padding: 60px 20px 50px 20px;
+}
+#landingtitle{
+  margin-top:5px;
+  margin-bottom:5%;
+}
+#landingparagraph {
+  margin-top: 5%;
+  margin-bottom: 35px;
+}
