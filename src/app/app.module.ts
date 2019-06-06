@@ -14,7 +14,13 @@ import { LandingtextComponent } from './components/home/landingtext/landingtext.
 import { MidtextComponent } from './components/home/midtext/midtext.component';
 import { AboutComponent } from './components/home/about/about.component';
 import { EndtextComponent } from './components/home/endtext/endtext.component';
+//import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchcriteriaComponent } from './components/advancesearch/searchcriteria/searchcriteria.component';
+//import { library } from '@fortawesome/fontawesome-svg-core';
+//import { fas } from '@fortawesome/free-solid-svg-icons';
+//import { far } from '@fortawesome/free-regular-svg-icons';
+//import { fab } from '@fortawesome/free-brands-svg-icons';
+//library.add(fas, far, fab);
 
 @NgModule({
   declarations: [
@@ -35,8 +41,11 @@ import { SearchcriteriaComponent } from './components/advancesearch/searchcriter
   imports: [
     BrowserModule,
     AppRoutingModule
+    //FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
