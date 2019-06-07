@@ -2,6 +2,7 @@
   background-color: darkred;
   text-align:center;
 }
+
 li.linktext{
   text-decoration:none;
   color: white;
@@ -9,15 +10,14 @@ li.linktext{
 li{
   list-style: none;
 }
-.fab {
+.fab, .fas {
   color: white;
 }
-.fas {
-  color:white;
-}
+
 .navlist {
   text-align: center;
 }
 .listitem {
   display: inline-block;
+  color: white;
 }
