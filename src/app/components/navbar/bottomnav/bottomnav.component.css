@@ -1,5 +1,6 @@
 #bottomnav{
   background-color: darkred;
+  text-align:center;
 }
 li.linktext{
   text-decoration:none;
@@ -13,4 +14,10 @@ li{
 }
 .fas {
   color:white;
+}
+.navlist {
+  text-align: center;
+}
+.listitem {
+  display: inline-block;
 }
