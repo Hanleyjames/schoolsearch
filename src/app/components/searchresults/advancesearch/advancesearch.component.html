@@ -6,8 +6,10 @@
       <input name="keywords" type="text"/>
       <section id="breakstyle"></section>
       <p>Career Field</p>
-      <select>
-        <option>example</option>
+      <select id="careerDropDown" (change)="storeIndex()">
+        <option *ngFor="let career of careerField; let i = index" value={{i}}>
+          {{career.name}}
+        </option>
       </select>
       <p>Academic Subjects</p>
       <select>
