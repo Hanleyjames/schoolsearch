@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { SearchresultsComponent } from './components/searchresults/searchresults.component';
-import { AdvancesearchComponent } from './components/advancesearch/advancesearch.component';
+import { AdvancesearchComponent } from './components/searchresults/advancesearch/advancesearch.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
