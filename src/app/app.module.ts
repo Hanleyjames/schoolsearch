@@ -14,7 +14,7 @@ import { LandingtextComponent } from './components/home/landingtext/landingtext.
 import { MidtextComponent } from './components/home/midtext/midtext.component';
 import { AboutComponent } from './components/home/about/about.component';
 import { EndtextComponent } from './components/home/endtext/endtext.component';
-import { SearchcriteriaComponent } from './components/searchresults/advancesearch/searchcriteria/searchcriteria.component';
+import { HeroesComponent } from './heroes/heroes.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +30,7 @@ import { SearchcriteriaComponent } from './components/searchresults/advancesearc
     MidtextComponent,
     AboutComponent,
     EndtextComponent,
-    SearchcriteriaComponent
+    HeroesComponent
   ],
   imports: [
     BrowserModule,
