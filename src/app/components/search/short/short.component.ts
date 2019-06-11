@@ -16,6 +16,8 @@ export class ShortComponent implements OnInit {
       data => {
         this.careerField = data;
         console.log(data);
+        console.log(data[0].name);
+        console.log(data[0].name.strand[0]);
       },
       (err: HttpErrorResponse) => {
         console.log(err.message);
