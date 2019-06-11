@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-short',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShortComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpService: HttpClient,
+    private ref: ChangeDetectorRef) { }
 
   ngOnInit() {
+    this.httpService.get('../../../assets/json/classes.json').subscribe(
+      data => {
+        this.careerField = data;
+        console.log(data);
+      },
+      (err: HttpErrorResponse) => {
+        console.log(err.message);
+      }
+    );
   }
 
 }

@@ -1,3 +1,19 @@
-<p>
-  short works!
-</p>
+<section id="searchbox">
+  <form>
+    <label name="keywords">Keywords</label>
+    <input name="keywords" type="text" />
+    <section id="breakstyle"></section>
+    <p>Career Field</p>
+    <select id="careerDropDown" (change)="storeIndex()">
+      <option *ngFor="let career of careerField; let i = index" value={{i}}>
+        {{career.name}}
+      </option>
+    </select>
+    <p>Academic Subjects</p>
+    <select id="academicSubjectDropDown" (change)="storeIndex()">
+      <option>example</option>
+    </select>
+    <button>Cancel</button>
+    <button>Search</button>
+  </form>
+</section>
