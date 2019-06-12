@@ -18,11 +18,13 @@ export class ShortComponent implements OnInit {
   currentSubject: string;
   tempCareers: string[];
   tempSubject: string[];
+  dataPassed: object;
   
   //Method to store index position of career dropdown value(i)
   storeIndex() {
     //For example, lets assume it is Engineering
     const i = (document.getElementById('careerDropDown') as HTMLInputElement).value;
+    this.dataPassed = this.data[i];
     //Set subjects to the strand object
     this.subjects = this.data[i].strand;
     //sets TempCareers to the name
@@ -49,15 +51,17 @@ export class ShortComponent implements OnInit {
       this.tempSubject.push(key);
     })
     //pass the data
-    this.storeSubject(this.data[i]);
+    console.log("Pass the data: " + this.data[i] + " : " + this.tempSubject);
+    this.storeSubject();
   }
   //stores chosen index and career options
-  storeSubject(currentcareer) {
+  storeSubject() {
     //sets currentCarrer to the chosen json career option
-    this.currentCareer = currentcareer;
+    
     //Set j to the value of the second drop down
     const j = (document.getElementById('academicSubjectDropDown') as HTMLInputElement).value;
-    console.log("j : " + j);
+
+    console.log("Datapassed as store subject: "+this.subjects);
 
   }
   //write setter
