@@ -3,7 +3,7 @@
     "id": "1",
     "name": "Engineering",
     "strand": {
-      "MechanicalEngineering": {
+      "Mechanical Engineering": {
         "strandName": "Mechanical Engineering",
         "outcome": [ "Any" ],
         "subjects": {
@@ -85,10 +85,10 @@
   },
   {
     "id": "4",
-    "name": "Buisness",
+    "name": "Business",
     "strand": {
       "Buisness Administration": {
-        "strandName": "Buisness Administration",
+        "strandName": "Business Administration",
         "outcome": [ "Any" ],
         "subjects": {
           "MAT": [ "1000", "1100", "1200", "1300", "1400", "1500", "1600", "1700", "1899", "1900" ],

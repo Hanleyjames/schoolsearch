@@ -15,20 +15,16 @@ export class ShortComponent implements OnInit {
   subjects: object;
   currentCareer: string;
   currentSubject: string;
-  tempIndexI: string;
-  tempIndexJ: string;
   tempCareers: string[];
   tempSubject: string[];
   
   //Method to store index position of career dropdown value(i)
-  storeIndex(){
+  storeIndex() {
+    //For example, lets assume it is Engineering
     const i = (document.getElementById('careerDropDown') as HTMLInputElement).value;
-    this.tempIndexI = i;
+    //Set subjects to the strand object
     this.subjects = this.data[i].strand;
-    for(let x = 0; x < this. data[i].strand;  x++ ){
-      console.log(this.data[i].strand[x]);
-    }
-    console.log(this.tempSubject);
+
     this.tempCareers = this.data[i].name;
     this.tempSubject = [];
     Object.entries(this.data[i].strand).forEach(entry => {
@@ -38,9 +34,9 @@ export class ShortComponent implements OnInit {
         let key = entry[0];
         let value = entry[1];
         let x = [key, value];
-        console.log(x)
+        console.log("Key & value: "+x)
       })
-      console.log(key);
+      console.log("Key: "+key);
       this.tempSubject.push(key);
     })
   }
