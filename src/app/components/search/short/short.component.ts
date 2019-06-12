@@ -74,16 +74,6 @@ export class ShortComponent implements OnInit {
     this.httpService.get('../../../assets/json/classes.json').subscribe(
       data => {
         this.data = data;
-        console.log(data);
-        // for (let i = 0; i < x.length; i++) {
-        //   console.log(data[0].strand.MechanicalEngineering.);
-        // }
-        Object.entries(data[0].strand).forEach(entry => {
-          let key = entry[0];
-          let value = entry[1];
-          let x = [key, value];
-          console.log(x);
-        })
       },
       (err: HttpErrorResponse) => {
         console.log(err.message);
