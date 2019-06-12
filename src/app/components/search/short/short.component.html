@@ -5,7 +5,7 @@
     <section id="breakstyle"></section>
     <p>Career Field</p>
     <select id="careerDropDown" (change)="storeIndex()">
-      <option *ngFor="let career of careerField; let i = index" value={{i}}>
+      <option *ngFor="let career of data; let i = index" value={{i}}>
         {{career.name}}
       </option>
     </select>

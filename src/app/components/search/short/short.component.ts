@@ -10,14 +10,15 @@ export class ShortComponent implements OnInit {
 
   constructor(private httpService: HttpClient,
     private ref: ChangeDetectorRef) { }
+  data: object;
 
   ngOnInit() {
     this.httpService.get('../../../assets/json/classes.json').subscribe(
       data => {
-        this.careerField = data;
+        this.data = data;
         console.log(data);
         console.log(data[0].name);
-        console.log(data[0].name.strand[0]);
+        console.log(data[0].strand);
       },
       (err: HttpErrorResponse) => {
         console.log(err.message);

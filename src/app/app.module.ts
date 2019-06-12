@@ -17,7 +17,7 @@ import { ResultsComponent } from './components/search/results/results.component'
 import { ShortComponent } from './components/search/short/short.component';
 import { LongComponent } from './components/search/long/long.component';
 import { AdvancedComponent } from './components/search/advanced/advanced.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -42,7 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
