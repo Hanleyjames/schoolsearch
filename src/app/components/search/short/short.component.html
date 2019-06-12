@@ -1,0 +1,21 @@
+<section id="searchbox">
+  <form>
+    <label name="keywords">Keywords</label>
+    <input name="keywords" type="text" />
+    <section id="breakstyle"></section>
+    <p>Career Field</p>
+    <select id="careerDropDown" (change)="storeIndex()">
+      <option *ngFor="let career of data; let i = index" value={{i}}>
+        {{career.name}}
+      </option>
+    </select>
+    <p>Academic Subjects</p>
+    <select id="academicSubjectDropDown" (change)="storeSubject()">
+      <option *ngFor="let mono of tempSubject; let j = index" value={{j}}>
+        {{tempSubject[j]}}
+      </option>
+    </select>
+    <button>Cancel</button>
+    <button>Search</button>
+  </form>
+</section>

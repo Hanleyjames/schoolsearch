@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { SearchresultsComponent } from './components/searchresults/searchresults.component';
-import { AdvancesearchComponent } from './components/searchresults/advancesearch/advancesearch.component';
+import { ResultsComponent } from './components/search/results/results.component';
+import { AdvancedComponent } from './components/search/advanced/advanced.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'results', component: SearchresultsComponent },
-  { path: 'search', component: AdvancesearchComponent }
+  { path: 'advancedsearch', component: AdvancedComponent },
+  { path: 'results', component: ResultsComponent }
 ];
 
 @NgModule({

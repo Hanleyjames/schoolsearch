@@ -7,14 +7,18 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TopnavComponent } from './components/navbar/topnav/topnav.component';
 import { BottomnavComponent } from './components/navbar/bottomnav/bottomnav.component';
 import { HomeComponent } from './components/home/home.component';
-import { AdvancesearchComponent } from './components/searchresults/advancesearch/advancesearch.component';
-import { SearchresultsComponent } from './components/searchresults/searchresults.component';
 import { QuicksearchComponent } from './components/home/quicksearch/quicksearch.component';
 import { LandingtextComponent } from './components/home/landingtext/landingtext.component';
 import { MidtextComponent } from './components/home/midtext/midtext.component';
 import { AboutComponent } from './components/home/about/about.component';
 import { EndtextComponent } from './components/home/endtext/endtext.component';
-import { HeroesComponent } from './heroes/heroes.component';
+import { SearchComponent } from './components/search/search.component';
+import { ResultsComponent } from './components/search/results/results.component';
+import { ShortComponent } from './components/search/short/short.component';
+import { LongComponent } from './components/search/long/long.component';
+import { AdvancedComponent } from './components/search/advanced/advanced.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -23,19 +27,23 @@ import { HeroesComponent } from './heroes/heroes.component';
     TopnavComponent,
     BottomnavComponent,
     HomeComponent,
-    AdvancesearchComponent,
-    SearchresultsComponent,
     QuicksearchComponent,
     LandingtextComponent,
     MidtextComponent,
     AboutComponent,
     EndtextComponent,
-    HeroesComponent
+    SearchComponent,
+    ResultsComponent,
+    ShortComponent,
+    LongComponent,
+    AdvancedComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
