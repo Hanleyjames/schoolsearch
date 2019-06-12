@@ -10,7 +10,7 @@
       </option>
     </select>
     <p>Academic Subjects</p>
-    <select id="academicSubjectDropDown">
+    <select id="academicSubjectDropDown" (change)="storeSubject()">
       <option *ngFor="let mono of tempSubject; let j = index" value={{j}}>
         {{tempSubject[j]}}
       </option>

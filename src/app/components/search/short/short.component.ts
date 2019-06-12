@@ -48,6 +48,17 @@ export class ShortComponent implements OnInit {
       console.log(key);
       this.tempSubject.push(key);
     })
+    //pass the data
+    this.storeSubject(this.data[i]);
+  }
+  //stores chosen index and career options
+  storeSubject(currentcareer) {
+    //sets currentCarrer to the chosen json career option
+    this.currentCareer = currentcareer;
+    //Set j to the value of the second drop down
+    const j = (document.getElementById('academicSubjectDropDown') as HTMLInputElement).value;
+    console.log("j : " + j);
+
   }
   //write setter
   setSearchTerms(name, strand, subjects) {
