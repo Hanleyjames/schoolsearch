@@ -57,6 +57,7 @@ export class ShortComponent implements OnInit {
     //pass the data
     this.storeSubject();
   }
+
   //stores chosen index and career options
   storeSubject() {
     //Set j to the value of the second drop down or the value of zero if the input element is an empty string / true
@@ -65,9 +66,8 @@ export class ShortComponent implements OnInit {
     let currentSelectedSubject = this.tempSubject[j];
     //Set dataToSend to the selected json data
     this.dataToSend = this.subjects[currentSelectedSubject];
-    //Todo: Emit data to service.
-
   }
+
 
 
   ngOnInit() {
