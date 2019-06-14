@@ -68,11 +68,7 @@ export class ShortComponent implements OnInit {
     //Todo: Emit data to service.
 
   }
-  //write setter
-  setSearchTerms(name, strand, subjects) {
 
-  }
-  //finish emitter to results
 
   ngOnInit() {
     this.httpService.get('../../../assets/json/classes.json').subscribe(
