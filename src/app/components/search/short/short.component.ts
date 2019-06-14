@@ -56,12 +56,12 @@ export class ShortComponent implements OnInit {
   }
   //stores chosen index and career options
   storeSubject() {
-    //sets currentCarrer to the chosen json career option
-    
     //Set j to the value of the second drop down
     const j = (document.getElementById('academicSubjectDropDown') as HTMLInputElement).value;
 
-    console.log("Datapassed as store subject: "+this.subjects);
+    console.log("Datapassed as store subject: " + this.subjects);
+    //Todo: pass tempSubject selection(j) as this.dataPassed.strand.tempSubject[j]
+    //Pass the strand and tempSubject[j] to get the outcome and subject array from the this.dataPassed.strand.tempSubject with an emitter to the parent results component
 
   }
   //write setter
