@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+const util = require('util');
 
 @Component({
   selector: 'app-short',
@@ -19,11 +20,14 @@ export class ShortComponent implements OnInit {
   tempCareers: string[];
   tempSubject: string[];
   dataPassed: object;
+  dataToSend: object;
+
+  
   
   //Method to store index position of career dropdown value(i)
   storeIndex() {
     //For example, lets assume it is Engineering
-    const i = (document.getElementById('careerDropDown') as HTMLInputElement).value;
+    const i = ((document.getElementById('careerDropDown') as HTMLInputElement).value || 0);
     this.dataPassed = this.data[i];
     //Set subjects to the strand object
     this.subjects = this.data[i].strand;
@@ -51,17 +55,17 @@ export class ShortComponent implements OnInit {
       this.tempSubject.push(key);
     })
     //pass the data
-    console.log("Pass the data: " + this.data[i] + " : " + this.tempSubject);
     this.storeSubject();
   }
   //stores chosen index and career options
   storeSubject() {
-    //Set j to the value of the second drop down
-    const j = (document.getElementById('academicSubjectDropDown') as HTMLInputElement).value;
-
-    console.log("Datapassed as store subject: " + this.subjects);
-    //Todo: pass tempSubject selection(j) as this.dataPassed.strand.tempSubject[j]
-    //Pass the strand and tempSubject[j] to get the outcome and subject array from the this.dataPassed.strand.tempSubject with an emitter to the parent results component
+    //Set j to the value of the second drop down or the value of zero if the input element is an empty string / true
+    const j = ((document.getElementById('subjectDropDown') as HTMLInputElement).value || 0);
+    //Set a locally scoped subject based on the temp array subject.
+    let currentSelectedSubject = this.tempSubject[j];
+    //Set dataToSend to the selected json data
+    this.dataToSend = this.subjects[currentSelectedSubject];
+    //Todo: Emit data to service.
 
   }
   //write setter
