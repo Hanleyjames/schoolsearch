@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SearchdropdownService } from '../../_services/searchdropdown.service';
 
 @Component({
   selector: 'app-search',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
+  message: object;
 
-  constructor() { }
+  constructor(private data: SearchdropdownService) { }
 
   ngOnInit() {
+    this.data.currentMessage.subscribe(message => this.message = message);
+    console.log(this.message);
   }
+
+
 
 }
