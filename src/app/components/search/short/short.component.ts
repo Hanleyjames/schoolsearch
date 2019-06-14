@@ -68,7 +68,10 @@ export class ShortComponent implements OnInit {
     this.dataToSend = this.subjects[currentSelectedSubject];
   }
 
+  // Pass the message to the service and redirect the view
+  passResults() {
 
+  }
 
   ngOnInit() {
     this.httpService.get('../../../assets/json/classes.json').subscribe(
