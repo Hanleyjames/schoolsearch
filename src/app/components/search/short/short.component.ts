@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { SearchdropdownService } from '../../../_services/searchdropdown.service';
 const util = require('util');
 
 @Component({
@@ -10,7 +11,8 @@ const util = require('util');
 export class ShortComponent implements OnInit {
 
   constructor(private httpService: HttpClient,
-    private ref: ChangeDetectorRef) { }
+    private ref: ChangeDetectorRef,
+    private serviceData: SearchdropdownService ) { }
   //type definitions
   data: object;
   careers: object;
@@ -70,6 +72,7 @@ export class ShortComponent implements OnInit {
 
   // Pass the message to the service and redirect the view
   passResults() {
+    this.serviceData.changeMessage(this.dataToSend);
 
   }
 
