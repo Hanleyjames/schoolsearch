@@ -73,7 +73,6 @@ export class ShortComponent implements OnInit {
   // Pass the message to the service and redirect the view
   passResults() {
     this.serviceData.changeMessage(this.dataToSend);
-
   }
 
   ngOnInit() {
