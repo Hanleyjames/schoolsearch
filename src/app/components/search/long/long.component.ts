@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-long',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./long.component.css']
 })
 export class LongComponent implements OnInit {
+  longForm: FormGroup;
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    this.longForm = this.fb.group({
+      keywords: '',
+      careers: '',
+      subjects: '',
+      strands: '',
+      outcome: '',
+      competency: '',
+      grade: '',
+      cluster: '',
+      standard: ''
+    })
   }
 
 }
