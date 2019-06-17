@@ -1,23 +1,23 @@
 <section id="longsearchParent">
-  <section>
-    ng if keywords
-  </section>
-  <section>
-    career field
-  </section>
-  <section>
-    academic subjects
-  </section>
-  <section>
-    strands
-  </section>
-  <section>
-    outcome
-  </section>
-  <section>
-   ng if competency number
-  </section>
-  <section>
-    grade cluster <span> ng if standard number </span>
-  </section>
+  <form [formGroup]="longForm">
+    <section id="keywordsInput">
+      <input formControlName="keywords" />
+      ng if
+    </section>
+    <select id="careerAndSubjects">
+      <option formControlName="careers"></option>
+      <option formControlName="subjects"></option>
+    </select>
+    <select id="strandsOutcomeCompetency">
+      <option formControlName="strands"></option>
+      <option formControlName="outcome"></option>
+      
+      <option formControlName="competency">ng if</option>
+    </select>
+    <select id="gradeClusterStandard">
+      <option formControlName="grade"></option>
+      <option formControlName="cluster"></option>
+      <option formControlName="standard">ng if</option>
+    </select>
+  </form>
 </section>

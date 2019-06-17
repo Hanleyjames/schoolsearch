@@ -44,14 +44,14 @@ export class ShortComponent implements OnInit {
       //Gets the nested object of the subject
       let value = entry[1];
       //A for each loop iterated over each object of the subject(Clinical Engineering)
-      Object.entries(value).forEach(entry => {
-        //iterates over strand name key, outcome key, and subjects(Mat, Sci...) key
-        let key = entry[0];
-        //iterates over strand name values, outcomes values, and subjects objects
-        let value = entry[1];
-        let x = [key, value];
+      //Object.entries(value).forEach(entry => {
+      //  //iterates over strand name key, outcome key, and subjects(Mat, Sci...) key
+      //  let key = entry[0];
+      //  //iterates over strand name values, outcomes values, and subjects objects
+      //  let value = entry[1];
+      //  let x = [key, value];
 
-      })
+      //})
       //pushes the subject names into an array
       console.log(key);
       this.tempSubject.push(key);

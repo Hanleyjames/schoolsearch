@@ -12,6 +12,7 @@ export class SearchdropdownService {
   constructor() { }
   // change the message source object uppon being called
   changeMessage(message: object) {
-    this.messageSource.next(message)
+    this.messageSource.next(message);
+    console.log("Message changed");
   }
 }
